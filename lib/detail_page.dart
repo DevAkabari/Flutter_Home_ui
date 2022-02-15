@@ -5,8 +5,10 @@ import 'data.dart';
 class DetailPage extends StatelessWidget {
   final PlanetInfo planetInfo;
 
-  const DetailPage({required Key key, required this.planetInfo, required PlanetInfo PlanetInfo})
-      : super(key: key);
+  const DetailPage({
+    Key? key,
+    required this.planetInfo,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +50,7 @@ class DetailPage extends StatelessWidget {
                         Divider(color: Colors.black38),
                         SizedBox(height: 32),
                         Text(
-                          planetInfo.description ?? '',
+                          planetInfo.description,
                           maxLines: 5,
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(
